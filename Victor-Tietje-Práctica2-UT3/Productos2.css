@@ -1,0 +1,105 @@
+@keyframes productos
+{
+    from{
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    to{
+        transform: matrix(1.1, -0.1, 0.1, 1.1, 0, 0);
+    }
+}
+
+@keyframes estrella
+{
+    30%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+}
+
+*
+{
+    padding: 2px;
+    font-family: "Parkinsans", sans-serif;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    border: 2px inset black;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    max-width: 90%;
+}
+
+header
+{
+    margin: 5px;
+    padding: 5px;
+}
+
+nav
+{
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-around;
+    margin: 4px;
+}
+
+div
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 30px 10px;
+    background: white; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); 
+    margin: 20px;
+    flex-shrink: 1;
+    text-align: center;
+}
+
+.estrella
+{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 250px;
+    animation: estrella 2s infinite;
+    margin: 0;
+    padding: 0;
+}
+
+div:hover
+{
+    animation-name: productos;
+    animation: productos 0.5s forwards;
+}
+
+img
+{
+    display: flex;
+    flex-shrink: 1;
+}
+
+aside
+{
+    display: flex;
+}
+
+
+footer
+{
+    justify-content: end;
+    text-align: right;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 4px;
+}
